@@ -1,10 +1,14 @@
 #ifndef globals_h
 #define globals_h
 
+#include <string>
+
 const int SCREEN_WIDTH = 720;
 const int SCREEN_HEIGHT = 560;
 const int FPS = 60;
 const int TICK_PER_FRAME = 1000 / FPS;
+
+const std::string TITLE = "AutoCity";
 
 const int TILE_WIDTH = 80;
 const int TILE_HEIGHT = 80;

@@ -3,7 +3,7 @@
 #include "LTimer.h"
 #include "game.h"
 
-int main(int argc, const char * argv[]) {
+int main(int argc, char * argv[]) {
     if (!init()) {
         std::cout << "Algo ha fallado" << std::endl;
         return 0;
@@ -56,7 +56,6 @@ int main(int argc, const char * argv[]) {
         }
     }
     
-    //image.free();
     IMG_Quit();
     SDL_Quit();
     return 0;

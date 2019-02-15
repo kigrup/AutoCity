@@ -7,8 +7,6 @@
 #include <SDL2_image/SDL_image.h>
 #include "globals.h"
 
-const std::string TITLE = "GAME";
-
 SDL_Window * gWindow;
 
 SDL_Renderer * gRenderer;

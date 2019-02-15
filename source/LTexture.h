@@ -2,7 +2,6 @@
 #define LTexture_h
 
 #include <SDL2_image/SDL_image.h>
-#include <SDL2_ttf/SDL_ttf.h>
 #include <string>
 
 //Texture wrapper class
