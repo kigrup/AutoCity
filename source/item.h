@@ -9,8 +9,9 @@ private:
     std::string name;
     int count;
 public:
-    Item();
+    Item(int id, std::string name, int count);
     ~Item();
+    void Add(int c);
 };
 
 #endif /* item_h */
