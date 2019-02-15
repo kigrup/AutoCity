@@ -13,6 +13,7 @@
 		498084C322174A3E00050656 /* LTimer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 498084BD22174A3E00050656 /* LTimer.cpp */; };
 		498084C422174A3E00050656 /* LTexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 498084BE22174A3E00050656 /* LTexture.cpp */; };
 		498084C72217587600050656 /* villager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 498084C52217587600050656 /* villager.cpp */; };
+		498084CB22175C9200050656 /* item.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 498084C922175C9200050656 /* item.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,6 +41,8 @@
 		498084C222174A3E00050656 /* globals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = globals.h; sourceTree = "<group>"; };
 		498084C52217587600050656 /* villager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = villager.cpp; sourceTree = "<group>"; };
 		498084C62217587600050656 /* villager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = villager.h; sourceTree = "<group>"; };
+		498084C922175C9200050656 /* item.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = item.cpp; sourceTree = "<group>"; };
+		498084CA22175C9200050656 /* item.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = item.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +87,8 @@
 				498084C022174A3E00050656 /* LTimer.h */,
 				498084C52217587600050656 /* villager.cpp */,
 				498084C62217587600050656 /* villager.h */,
+				498084C922175C9200050656 /* item.cpp */,
+				498084CA22175C9200050656 /* item.h */,
 			);
 			path = source;
 			sourceTree = "<group>";
@@ -156,6 +161,7 @@
 				498084C322174A3E00050656 /* LTimer.cpp in Sources */,
 				498084B22217491600050656 /* main.cpp in Sources */,
 				498084C422174A3E00050656 /* LTexture.cpp in Sources */,
+				498084CB22175C9200050656 /* item.cpp in Sources */,
 				498084C72217587600050656 /* villager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
