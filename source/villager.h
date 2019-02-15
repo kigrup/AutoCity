@@ -3,7 +3,7 @@
 
 class Villager {
 private:
-    int id;
+    //id, stats
     
 public:
     Villager();
