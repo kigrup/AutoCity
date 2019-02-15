@@ -7,3 +7,11 @@ Villager::Villager(Info info, Properties properties, Item& money, std::string Sp
     
     sprite.loadFromFile(SpritePath, gRenderer);
 }
+
+Villager::~Villager() {
+    sprite.free();
+}
+
+void Villager::Render(int x, int y, SDL_Renderer * gRenderer) {
+    sprite.render(x, y, NULL, gRenderer);
+}
