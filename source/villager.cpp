@@ -1,6 +1,8 @@
 #include "villager.h"
 
-Villager::Villager(Info info, Properties properties, Item& money, std::string SpritePath, SDL_Renderer * gRenderer) {
+Villager::Villager(int x, int y, Info info, Properties properties, Item& money, std::string SpritePath, SDL_Renderer * gRenderer) {
+    pos_x = x;
+    pos_y = y;
     this->info = info;
     this->properties = properties;
     this->money = money;
@@ -12,6 +14,6 @@ Villager::~Villager() {
     sprite.free();
 }
 
-void Villager::Render(int x, int y, SDL_Renderer * gRenderer) {
-    sprite.render(x, y, NULL, gRenderer);
+void Villager::Render(SDL_Renderer * gRenderer) {
+    sprite.render(pos_x, pos_y, NULL, gRenderer);
 }

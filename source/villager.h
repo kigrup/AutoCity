@@ -28,11 +28,13 @@ private:
     
     LTexture sprite;
     
+    int pos_x, pos_y;
+    
 public:
-    Villager(Info info, Properties properties, Item& money, std::string SpritePath, SDL_Renderer * gRenderer);
+    Villager(int x, int y, Info info, Properties properties, Item& money, std::string SpritePath, SDL_Renderer * gRenderer);
     ~Villager();
     
-    void Render(int x, int y, SDL_Renderer * gRenderer);
+    void Render(SDL_Renderer * gRenderer);
 };
 
 #endif /* villager_h */
