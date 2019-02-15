@@ -1,5 +1,13 @@
 #include "item.h"
 
-Item::Item() {
-    id = 0;
+Item::Item(int id, std::string name, int count) {
+    this->id = id;
+    this->name = name;
+    this->count = count;
 }
+
+void Item::Add(int c){
+    count += c;
+}
+
+
