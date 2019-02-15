@@ -9,6 +9,7 @@ struct Properties {
     int sleep;
     int toilet;
     int fun;
+    bool sick;
     //relaciones
 };
 
