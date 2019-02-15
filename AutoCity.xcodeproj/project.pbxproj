@@ -74,11 +74,11 @@
 			children = (
 				498084C122174A3E00050656 /* game.h */,
 				498084C222174A3E00050656 /* globals.h */,
+				498084B12217491600050656 /* main.cpp */,
 				498084BE22174A3E00050656 /* LTexture.cpp */,
 				498084BF22174A3E00050656 /* LTexture.h */,
 				498084BD22174A3E00050656 /* LTimer.cpp */,
 				498084C022174A3E00050656 /* LTimer.h */,
-				498084B12217491600050656 /* main.cpp */,
 			);
 			path = source;
 			sourceTree = "<group>";
