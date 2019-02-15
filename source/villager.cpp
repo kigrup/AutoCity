@@ -1,5 +1,5 @@
 #include "villager.h"
 
-/*Villager::Villager() {
- 
-}*/
+Villager::Villager(Info info, Properties properties, Item money) {
+    
+}

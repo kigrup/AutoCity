@@ -4,28 +4,29 @@
 #include "item.h"
 
 struct Properties {
-    /*
-     *  hambre
-     *  sueño
-     *  aseo
-     *  relaciones
-     *  ocio
-     *
-     *
-     */
+    int hunger;
+    int sleep;
+    int toilet;
+    int fun;
+    //relaciones
 };
 
 struct Info {
-    //id, nombre, edad, genero, edad maxima
+    int id;
+    std::string name;
+    int age;
+    int gender; //1 = male, 2 = female, 3 = others
+    //edad maxima
 };
 
 class Villager {
 private:
-    //id, stats
     Item money;
+    Info info;
+    Properties properties;
     
 public:
-    Villager();
+    Villager(Info info, Properties properties, Item money);
     ~Villager();
 };
 
