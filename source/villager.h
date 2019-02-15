@@ -35,6 +35,10 @@ public:
     ~Villager();
     
     void Render(SDL_Renderer * gRenderer);
+    
+    void CheckProperties();
+    
+    void Die();
 };
 
 #endif /* villager_h */

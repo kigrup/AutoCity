@@ -17,3 +17,11 @@ Villager::~Villager() {
 void Villager::Render(SDL_Renderer * gRenderer) {
     sprite.render(pos_x, pos_y, NULL, gRenderer);
 }
+
+void Villager::CheckProperties() {
+    if (properties.hunger <= 0) Die();
+}
+
+void Villager::Die() {
+    this->~Villager();
+}
