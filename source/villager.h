@@ -2,6 +2,7 @@
 #define villager_h
 
 #include "item.h"
+#include "LTexture.h"
 
 struct Properties {
     int hunger;
@@ -25,8 +26,10 @@ private:
     Info info;
     Properties properties;
     
+    LTexture sprite;
+    
 public:
-    Villager(Info info, Properties properties, Item money);
+    Villager(Info info, Properties properties, Item money, std::string SpritePath);
     ~Villager();
 };
 
