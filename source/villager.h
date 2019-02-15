@@ -29,7 +29,7 @@ private:
     LTexture sprite;
     
 public:
-    Villager(Info info, Properties properties, Item money, std::string SpritePath);
+    Villager(Info info, Properties properties, Item money, std::string SpritePath, SDL_Renderer * gRenderer);
     ~Villager();
 };
 
