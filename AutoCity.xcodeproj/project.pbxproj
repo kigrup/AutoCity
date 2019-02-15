@@ -43,6 +43,7 @@
 		498084C62217587600050656 /* villager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = villager.h; sourceTree = "<group>"; };
 		498084C922175C9200050656 /* item.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = item.cpp; sourceTree = "<group>"; };
 		498084CA22175C9200050656 /* item.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = item.h; sourceTree = "<group>"; };
+		498084CE221775D600050656 /* owo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = owo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +62,7 @@
 		498084A52217491600050656 = {
 			isa = PBXGroup;
 			children = (
+				498084CC2217749200050656 /* assets */,
 				498084B02217491600050656 /* source */,
 				498084AF2217491600050656 /* Products */,
 				498084B8221749AB00050656 /* Frameworks */,
@@ -100,6 +102,22 @@
 				498084B9221749AB00050656 /* SDL2.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		498084CC2217749200050656 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				498084CD2217756300050656 /* sprites */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
+		498084CD2217756300050656 /* sprites */ = {
+			isa = PBXGroup;
+			children = (
+				498084CE221775D600050656 /* owo.png */,
+			);
+			path = sprites;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

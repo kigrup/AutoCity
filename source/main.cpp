@@ -1,6 +1,7 @@
 #include <iostream>
 #include "LTexture.h"
 #include "LTimer.h"
+#include "villager.h"
 #include "game.h"
 
 int main(int argc, char * argv[]) {
@@ -8,6 +9,12 @@ int main(int argc, char * argv[]) {
         std::cout << "Algo ha fallado" << std::endl;
         return 0;
     }
+    
+    Info info;
+    Properties properties;
+    Item money;
+    
+    Villager villager(0, 0, info, properties, money, "assets/sprites/owo.png", gRenderer);
     
     SDL_Event e;
     
@@ -30,6 +37,7 @@ int main(int argc, char * argv[]) {
             SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
             SDL_RenderClear(gRenderer);
         
+            villager.Render(gRenderer);
             
             SDL_RenderPresent(gRenderer);
             
@@ -44,7 +52,7 @@ int main(int argc, char * argv[]) {
         SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
         SDL_RenderClear(gRenderer);
     
-    
+        villager.Render(gRenderer);
     
         SDL_RenderPresent(gRenderer);
         
