@@ -14,6 +14,11 @@ Villager::~Villager() {
     sprite.free();
 }
 
+void Villager::SetPos(int x, int y) {
+    pos_x = x;
+    pos_y = y;
+}
+
 void Villager::Render(SDL_Renderer * gRenderer) {
     sprite.render(pos_x, pos_y, NULL, gRenderer);
 }

@@ -35,6 +35,8 @@ public:
     Villager(int x, int y, Info info, Properties properties, Item& money, std::string SpritePath, SDL_Renderer * gRenderer);
     ~Villager();
     
+    void SetPos(int x, int y);
+    
     void Render(SDL_Renderer * gRenderer);
     
     void CheckProperties();

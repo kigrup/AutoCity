@@ -16,6 +16,9 @@ int main(int argc, char * argv[]) {
     
     Villager villager(0, 0, info, properties, money, "assets/sprites/owo.png", gRenderer);
     
+    int x = 0;
+    int y = 0;
+    
     SDL_Event e;
     
     LTimer fpsTimer;
@@ -48,6 +51,8 @@ int main(int argc, char * argv[]) {
                 SDL_Delay( TICK_PER_FRAME - frameTicks );
             }
         }
+        ++x; ++y;
+        villager.SetPos(x, y);
         
         SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
         SDL_RenderClear(gRenderer);
