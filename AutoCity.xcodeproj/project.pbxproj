@@ -10,6 +10,8 @@
 		498084B22217491600050656 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 498084B12217491600050656 /* main.cpp */; };
 		498084BB221749AB00050656 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 498084B9221749AB00050656 /* SDL2.framework */; };
 		498084BC221749AB00050656 /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 498084BA221749AB00050656 /* SDL2_image.framework */; };
+		498084C322174A3E00050656 /* LTimer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 498084BD22174A3E00050656 /* LTimer.cpp */; };
+		498084C422174A3E00050656 /* LTexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 498084BE22174A3E00050656 /* LTexture.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +31,12 @@
 		498084B12217491600050656 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		498084B9221749AB00050656 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
 		498084BA221749AB00050656 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
+		498084BD22174A3E00050656 /* LTimer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LTimer.cpp; sourceTree = "<group>"; };
+		498084BE22174A3E00050656 /* LTexture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LTexture.cpp; sourceTree = "<group>"; };
+		498084BF22174A3E00050656 /* LTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTexture.h; sourceTree = "<group>"; };
+		498084C022174A3E00050656 /* LTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTimer.h; sourceTree = "<group>"; };
+		498084C122174A3E00050656 /* game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = game.h; sourceTree = "<group>"; };
+		498084C222174A3E00050656 /* globals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = globals.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +72,12 @@
 		498084B02217491600050656 /* source */ = {
 			isa = PBXGroup;
 			children = (
+				498084C122174A3E00050656 /* game.h */,
+				498084C222174A3E00050656 /* globals.h */,
+				498084BE22174A3E00050656 /* LTexture.cpp */,
+				498084BF22174A3E00050656 /* LTexture.h */,
+				498084BD22174A3E00050656 /* LTimer.cpp */,
+				498084C022174A3E00050656 /* LTimer.h */,
 				498084B12217491600050656 /* main.cpp */,
 			);
 			path = source;
@@ -134,7 +148,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				498084C322174A3E00050656 /* LTimer.cpp in Sources */,
 				498084B22217491600050656 /* main.cpp in Sources */,
+				498084C422174A3E00050656 /* LTexture.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
