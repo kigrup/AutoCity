@@ -18,9 +18,13 @@ private:
     std::vector<Villager*> b_Villager;
     
 public:
-    Building(int id, std::vector<std::string>& recovery, int max, std::string path);
+    Building(int id, std::vector<std::string>& recovery, int max, std::string path);    // constructora
     
     void villagerIn(Villager * bVillager);
+    
+    void free();  // liberar textura
+    
+    ~Building();    // destructora
 };
 
 
