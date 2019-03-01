@@ -11,13 +11,14 @@ class Building {
 private:
     int id;
     std::vector<std::string> recovery;
+    int MAX_PEOPLE;
     
     LTexture sprite;
     
-    Villager * b_Villager;
+    std::vector<Villager*> b_Villager;
     
 public:
-    Building(int id, std::vector<std::string>& recovery, std::string path);
+    Building(int id, std::vector<std::string>& recovery, int max, std::string path);
     
     void villagerIn(Villager * bVillager);
 };
