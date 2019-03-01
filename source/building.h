@@ -17,6 +17,8 @@ private:
     
     std::vector<Villager*> b_Villager;
     
+    SDL_Renderer * bRenderer;
+    
 public:
     Building(int id, std::vector<std::string>& recovery, int max, std::string path);    // constructora
     
