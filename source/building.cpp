@@ -1,6 +1,6 @@
 #include "building.h"
 
-Building::Building(int id, std::vector<std::string>& recovery, int max, std::string path, SDL_Renderer * gRenderer)
+Building::Building(int id, std::vector<Recovery>& recovery, int max, std::string path, SDL_Renderer * gRenderer)
 {
 	this->id = id;
 	this->recovery = recovery;
@@ -30,8 +30,7 @@ void Building::reordenar()
 
 void Building::villagerIn(Villager * bVillager) {
     if (lastVillager < MAX_PEOPLE - 1) {
-        ++lastVillager;
-        this->bVillager[lastVillager] = bVillager;
+        this->bVillager[lastVillager++] = bVillager;
     }
 }
 
@@ -48,6 +47,17 @@ void Building::villagerOut(Villager * bVillager) {
     }
     if (!found)
         std::cout << "No se ha encontrado el villager dentro del edificio #" << id << std::endl;
+}
+
+void Building::recover() {
+    for (int i = 0; i < recovery.size(); ++i) {
+        for (int j = 0; j <= lastVillager; ++j) {
+            int rec = bVillager[i]->getProperty(recovery[i].name);
+            if (rec < 100) rec += recovery[i].speed;
+            if (rec > 100) rec = 100;
+            bVillager[i]->setProperty(recovery[i].name, rec);
+        }
+    }
 }
 
 void Building::render(int x, int y) {

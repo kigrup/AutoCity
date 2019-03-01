@@ -7,10 +7,15 @@
 #include "LTexture.h"
 #include "villager.h"
 
+struct Recovery {
+    std::string name; ///Nombre de la propiedad a regenerar
+    int speed;        ///Velocidad de recuperacion
+};
+
 class Building {
 private:
     int id;
-    std::vector<std::string> recovery;
+    std::vector<Recovery> recovery;
     int MAX_PEOPLE;
     int lastVillager = 0;
     
@@ -23,7 +28,7 @@ private:
     void reordenar();
     
 public:
-    Building(int id, std::vector<std::string>& recovery, int max, std::string path, SDL_Renderer * gRenderer);    // constructora
+    Building(int id, std::vector<Recovery>& recovery, int max, std::string path, SDL_Renderer * gRenderer);    // constructora
     
     void villagerIn(Villager * bVillager);
     
