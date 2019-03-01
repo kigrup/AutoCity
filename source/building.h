@@ -15,7 +15,7 @@ private:
     
     LTexture sprite;
     
-    std::vector<Villager*> b_Villager;
+    std::vector<Villager*> bVillager;
     
     SDL_Renderer * bRenderer;
     
@@ -23,6 +23,12 @@ public:
     Building(int id, std::vector<std::string>& recovery, int max, std::string path, SDL_Renderer * gRenderer);    // constructora
     
     void villagerIn(Villager * bVillager);
+    
+    void recover();
+    
+    void villagerOut(Villager * bVillager);
+    
+    void render();     // ensenamelo papi
     
     void free();  // liberar textura
     
