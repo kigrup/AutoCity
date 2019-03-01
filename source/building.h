@@ -20,6 +20,8 @@ private:
     
     SDL_Renderer * bRenderer;
     
+    void reordenar();
+    
 public:
     Building(int id, std::vector<std::string>& recovery, int max, std::string path, SDL_Renderer * gRenderer);    // constructora
     
