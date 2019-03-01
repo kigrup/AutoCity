@@ -35,3 +35,16 @@ void Building::villagerOut(Villager * bVillager) {
     if (!found)
         std::cout << "No se ha encontrado el villager dentro del edificio #" << id << std::endl;
 }
+
+void Building::render(int x, int y) {
+    sprite.render(x, y, NULL, bRenderer);
+}
+
+void Building::free() {
+    sprite.free();
+    bRenderer = NULL;
+}
+
+Building::~Building() {
+    free();
+}

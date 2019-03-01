@@ -29,7 +29,7 @@ public:
     
     void villagerOut(Villager * bVillager);
     
-    void render();     // ensenamelo papi
+    void render(int x, int y);     // ensenamelo papi
     
     void free();  // liberar textura
     

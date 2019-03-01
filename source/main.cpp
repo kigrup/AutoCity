@@ -2,6 +2,7 @@
 #include "LTexture.h"
 #include "LTimer.h"
 #include "villager.h"
+#include "building.h"
 #include "game.h"
 
 int main(int argc, char * argv[]) {
@@ -14,7 +15,11 @@ int main(int argc, char * argv[]) {
     Properties properties;
     Item money;
     
+    std::vector<std::string> rec;
+    rec.push_back("hunger");
+    
     Villager villager(0, 0, info, properties, money, "assets/sprites/owo.png", gRenderer);
+    Building building(0, rec, 2, "assets/sprites/owo.png", gRenderer);
     
     int x = 0;
     int y = 0;
@@ -35,14 +40,16 @@ int main(int argc, char * argv[]) {
             
             if( e.type == SDL_QUIT ) quit = true;
             
-            if (e.type == SDL_KEYDOWN) {}
+            if (e.type == SDL_KEYDOWN) {
+                building.villagerOut(NULL);
+            }
         
-            SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
+            /*SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
             SDL_RenderClear(gRenderer);
         
             villager.Render(gRenderer);
             
-            SDL_RenderPresent(gRenderer);
+            SDL_RenderPresent(gRenderer);*/
             
             int frameTicks = fpsTimer.getTicks();
             if( frameTicks < TICK_PER_FRAME )
@@ -57,6 +64,7 @@ int main(int argc, char * argv[]) {
         SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
         SDL_RenderClear(gRenderer);
     
+        building.render(10, 10);
         villager.Render(gRenderer);
     
         SDL_RenderPresent(gRenderer);
