@@ -16,22 +16,16 @@ Building::Building(int id, std::vector<std::string>& recovery, int max, std::str
 }
 
 void Building::reordenar() 
-{ 
-    int count = 0;  // Count of non-zero elements 
-    int n = vec.size();
-    // Traverse the array. If element encountered is non- 
-    // zero, then replace the element at index 'count'  
-    // with this element 
+{
+    //Funcion que reorganiza el bVillager para que los
+    //NULL se queden al final
+    int count = 0;
+    unsigned long n = bVillager.size();
     for (int i = 0; i < n; i++) 
-        if (vec[i] != NULL) 
-            vec[count++] = vec[i]; // here count is  
-                                   // incremented 
-  
-    // Now all non-zero elements have been shifted to  
-    // front and  'count' is set as index of first 0.  
-    // Make all elements 0 from count to end. 
+        if (bVillager[i] != NULL)
+            bVillager[count++] = bVillager[i];
     while (count < n) 
-        vec[count++] = NULL; 
+        bVillager[count++] = NULL;
 } 
 
 void Building::villagerIn(Villager * bVillager) {
