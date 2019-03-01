@@ -70,14 +70,14 @@ int main(int argc, char * argv[]) {
             }
         }
         ++x; ++y;
-        villager.SetPos(x, y);
+        villager.setPos(x, y);
         building.recover();
         
         SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
         SDL_RenderClear(gRenderer);
     
         building.render(10, 10);
-        villager.Render(gRenderer);
+        villager.render();
     
         SDL_RenderPresent(gRenderer);
         

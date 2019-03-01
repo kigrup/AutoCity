@@ -7,6 +7,8 @@ Villager::Villager(int x, int y, Info info, Properties& properties, Item& money,
     vProperties = properties;
     this->money = money;
     
+    vRenderer = gRenderer;
+    
     sprite.loadFromFile(SpritePath, gRenderer);
 }
 
@@ -32,19 +34,19 @@ bool Villager::isSick() {
     return vProperties.sick;
 }
 
-void Villager::SetPos(int x, int y) {
+void Villager::setPos(int x, int y) {
     pos_x = x;
     pos_y = y;
 }
 
-void Villager::Render(SDL_Renderer * gRenderer) {
-    sprite.render(pos_x, pos_y, NULL, gRenderer);
+void Villager::render() {
+    sprite.render(pos_x, pos_y, NULL, vRenderer);
 }
 
-void Villager::CheckProperties() {
-    if (vProperties.hunger <= 0) Die();
+void Villager::checkProperties() {
+    if (vProperties.hunger <= 0) die();
 }
 
-void Villager::Die() {
+void Villager::die() {
     this->~Villager();
 }

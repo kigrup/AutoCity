@@ -32,6 +32,8 @@ private:
     
     int pos_x, pos_y;
     
+    SDL_Renderer * vRenderer;
+    
 public:
     Villager(int x, int y, Info info, Properties& properties, Item& money, std::string SpritePath, SDL_Renderer * gRenderer);
     ~Villager();
@@ -42,13 +44,13 @@ public:
     
     bool isSick();
     
-    void SetPos(int x, int y);
+    void setPos(int x, int y);
     
-    void Render(SDL_Renderer * gRenderer);
+    void render();
     
-    void CheckProperties();
+    void checkProperties();
     
-    void Die();
+    void die();
 };
 
 #endif /* villager_h */
