@@ -12,6 +12,7 @@ private:
     int id;
     std::vector<std::string> recovery;
     int MAX_PEOPLE;
+    int lastVillager = 0;
     
     LTexture sprite;
     
