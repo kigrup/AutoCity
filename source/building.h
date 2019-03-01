@@ -17,10 +17,16 @@ private:
     
     std::vector<Villager*> b_Villager;
     
+    SDL_Renderer * bRenderer;
+    
 public:
-    Building(int id, std::vector<std::string>& recovery, int max, std::string path);
+    Building(int id, std::vector<std::string>& recovery, int max, std::string path, SDL_Renderer * gRenderer);    // constructora
     
     void villagerIn(Villager * bVillager);
+    
+    void free();  // liberar textura
+    
+    ~Building();    // destructora
 };
 
 
