@@ -27,10 +27,16 @@ int main(int argc, char * argv[]) {
     rect.speed = 1;
     rec.push_back(rect);
     
-    Villager villager(0, 0, info, properties, money, "assets/sprites/owo.png", gRenderer);
-    Building building(0, rec, 2, "assets/sprites/owo.png", gRenderer);
+    Villager villager1(0, 0, info, properties, money, "assets/sprites/owo.png", gRenderer);
+    Villager villager2(25, 25, info, properties, money, "assets/sprites/owo.png", gRenderer);
+    Villager villager3(50, 100, info, properties, money, "assets/sprites/owo.png", gRenderer);
+    Building building(0, rec, 5, "assets/sprites/owo.png", gRenderer);
     
-    building.villagerIn(&villager);
+    building.villagerIn(&villager1);
+    building.villagerIn(&villager2);
+    building.villagerIn(&villager3);
+    
+    int ciclo = 0;
     
     int x = 0;
     int y = 0;
@@ -70,14 +76,28 @@ int main(int argc, char * argv[]) {
             }
         }
         ++x; ++y;
-        villager.setPos(x, y);
+        ++ciclo;
+        
+        if (ciclo == 500) {
+            building.villagerOut(&villager2);
+            std::cout << "Sale el 2" << std::endl;
+        }
+        
+        if (ciclo == 1000) {
+            building.villagerOut(&villager3);
+            std::cout << "Sale el 3" << std::endl;
+        }
+        
+        villager1.setPos(x, y);
         building.recover();
         
         SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
         SDL_RenderClear(gRenderer);
     
         building.render(10, 10);
-        villager.render();
+        villager1.render();
+        villager2.render();
+        villager3.render();
     
         SDL_RenderPresent(gRenderer);
         

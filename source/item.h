@@ -11,7 +11,7 @@ private:
 public:
     Item();
     Item(int id, std::string name, int count);
-    void Add(int c);
+    void add(int c);
 };
 
 #endif /* item_h */

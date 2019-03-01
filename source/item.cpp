@@ -12,7 +12,7 @@ Item::Item(int id, std::string name, int count) {
     this->count = count;
 }
 
-void Item::Add(int c){
+void Item::add(int c){
     count += c;
 }
 
