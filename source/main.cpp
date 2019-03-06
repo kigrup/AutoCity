@@ -58,7 +58,14 @@ int main(int argc, char * argv[]) {
             if( e.type == SDL_QUIT ) quit = true;
             
             if (e.type == SDL_KEYDOWN) {
-                building.villagerOut(NULL);
+                switch (e.key.keysym.sym) {
+                    case SDLK_ESCAPE:
+                        quit = true;
+                        break;
+                        
+                    default:
+                        break;
+                }
             }
         
             /*SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
@@ -80,11 +87,13 @@ int main(int argc, char * argv[]) {
         
         if (ciclo == 500) {
             building.villagerOut(&villager2);
+            villager2.die();
             std::cout << "Sale el 2" << std::endl;
         }
         
         if (ciclo == 1000) {
             building.villagerOut(&villager3);
+            villager3.die();
             std::cout << "Sale el 3" << std::endl;
         }
         
