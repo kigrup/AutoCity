@@ -44,7 +44,23 @@ void Villager::render() {
 }
 
 void Villager::checkProperties() {
-    if (vProperties.hunger <= 0) die();
+    if (vProperties.health <= 0) die();
+    if (!vProperties.sick) {
+        if (vProperties.hunger <= 0) vProperties.sick = true;
+        if (vProperties.sleep <= 0) vProperties.sick = true;
+        if (vProperties.toilet <= 0) vProperties.sick = true;
+        if (vProperties.fun <= 0) vProperties.sick = true;
+    }
+}
+
+bool Villager::checkAllPropertiesOK() {
+    return (vProperties.fun > 0) and (vProperties.hunger > 0) and (vProperties.sleep > 0) and (vProperties.toilet > 0);
+}
+
+void Villager::goToHospital() {
+    if (vProperties.sick) {
+        if (vProperties.health > 0 and checkAllPropertiesOK()) vProperties.sick = false;
+    }
 }
 
 void Villager::die() {

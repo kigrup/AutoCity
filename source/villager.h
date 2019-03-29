@@ -6,6 +6,7 @@
 #include "LTexture.h"
 
 struct Properties {
+    int health;
     int hunger;
     int sleep;
     int toilet;
@@ -43,6 +44,10 @@ public:
     void setProperty(std::string property, int value);
     
     bool isSick();
+    
+    void goToHospital();
+    
+    bool checkAllPropertiesOK();
     
     void setPos(int x, int y);
     
